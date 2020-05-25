@@ -37,11 +37,7 @@
 						<objectStoreV2>true</objectStoreV2>
 						
 						<properties>
-							<mule.env>${env.mule.env}</mule.env>	
-							<anypoint.platform.client_id>${env.anypoint.platform.client_id}</anypoint.platform.client_id>		
-							<anypoint.platform.client_secret>${env.anypoint.platform.client_secret}</anypoint.platform.client_secret>
-							<anypoint.platform.config.analytics.agent.enabled>${env.anypoint.platform.config.analytics.agent.enabled}</anypoint.platform.config.analytics.agent.enabled>
-							<response.message>${env.response.message}</response.message>					
+							<mule.env>${env.mule.env}</mule.env>
 						</properties>
 						
 					</cloudHubDeployment>
