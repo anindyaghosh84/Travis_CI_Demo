@@ -27,6 +27,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployhment>
+						<!-- pass these values in environment variable -->
 						<server>${server}</server>
 						<workers>${workers}</workers>
 						<workerType>${workerType}</workerType>
