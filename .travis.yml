@@ -10,26 +10,26 @@ cache:
   - "$HOME/.cache"
 
 jobs:
- - stage: deploy
-   name: 'Deploy to cloudhub Sandbox environment'
-   script:
-    - cp .travis.settings.xml $HOME/.m2/settings.xml
-    - mvn clean install deploy -DmuleDeploy -Dserver=$server -Dworkers=$workers -DworkerType=$workerType -Denvironment=$environment -DmuleVersion=$muleVersion -DapplicationName=$applicationName
-   on:
-    branch: dev
+ include:
+  - stage: deploy
+    name: 'Deploy to cloudhub Sandbox environment'
+    script:
+     - cp .travis.settings.xml $HOME/.m2/settings.xml
+     - mvn clean install deploy -DmuleDeploy -Dserver=$server -Dworkers=$workers -DworkerType=$workerType -Denvironment=$environment -DmuleVersion=$muleVersion  -DapplicationName=$applicationName
+    on:
+     branch: dev
    
- - stage: test
-   name: 'Perform Newman test'
-   install:
-    - nvm install $NODE_VERSION
-    - npm install newman
-   before_script:
-    - nvm use $NODE_VERSION
-    - npm --version
-    - node --version
-    - node_modules/.bin/newman --version
-   script:
-    - node_modules/.bin/newman run Trevis-ci-test-postman-collection.postman_collection.json --disable-unicode
-   on:
-    branch: dev
-    
+  - stage: test
+    name: 'Perform Newman test'
+    install:
+     - nvm install $NODE_VERSION
+     - npm install newman
+    before_script:
+     - nvm use $NODE_VERSION
+     - npm --version
+     - node --version
+     - node_modules/.bin/newman --version
+    script:
+     - node_modules/.bin/newman run Trevis-ci-test-postman-collection.postman_collection.json --disable-unicode
+    on:
+     branch: dev
