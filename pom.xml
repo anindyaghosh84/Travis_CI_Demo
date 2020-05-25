@@ -37,7 +37,12 @@
 						<objectStoreV2>true</objectStoreV2>
 						
 						<properties>
+							<!-- pass these values in environment variable -->
 							<muleEnv>${env.muleEnv}</muleEnv>
+							<response.message>${env.responseMessage}</response.message>
+							<anypoint.platform.client_id>${env.apClientId}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${env.apClientSecret}</anypoint.platform.client_secret>
+							<anypoint.platform.config.analytics.agent.enabled>${env.apAnalytics}</anypoint.platform.config.analytics.agent.enabled>
 						</properties>
 						
 					</cloudHubDeployment>
