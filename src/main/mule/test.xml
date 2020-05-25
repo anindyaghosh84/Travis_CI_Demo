@@ -8,7 +8,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="fbd59937-0a1d-4fe5-8fa8-61d34c19703e" >
 		<http:listener-connection host="${http.host}" port="${http.port}" />
 	</http:listener-config>
-	<configuration-properties doc:name="Configuration properties" doc:id="2dddf525-ed0a-4949-a711-b9ee0802bb06" file="${mule.env}.properties" />
+	<configuration-properties doc:name="Configuration properties" doc:id="2dddf525-ed0a-4949-a711-b9ee0802bb06" file="${muleEnv}.properties" />
 	<flow name="testFlow" doc:id="666f2e58-ef0a-4e33-821a-f7aa0d748553" >
 		<http:listener doc:name="Listener" doc:id="7eb1428a-8c1d-4f32-8d0c-f86d991784af" config-ref="HTTP_Listener_config" path="/test"/>
 		<ee:transform doc:name="Transform Message" doc:id="99f86b35-fd63-44de-a79d-609ad158b251" >
@@ -21,6 +21,5 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="47f3ed46-2eb2-45ed-a06e-020d88330ecc" message="#[payload]"/>
 	</flow>
 </mule>
