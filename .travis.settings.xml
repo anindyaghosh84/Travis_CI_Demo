@@ -6,4 +6,4 @@
 			<password>${env.password}</password>
 		</server>
 	</servers>
-</settings> 
+</settings>
