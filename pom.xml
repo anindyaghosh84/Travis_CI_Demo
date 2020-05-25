@@ -26,7 +26,7 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployhment>
+					<cloudHubDeployment>
 						<!-- pass these values in environment variable -->
 						<server>${server}</server>
 						<workers>${workers}</workers>
@@ -35,7 +35,7 @@
 						<muleVersion>${muleVersion}</muleVersion>
 						<applicationName>${applicationName}</applicationName>
 						<objectStoreV2>true</objectStoreV2>
-					</cloudHubDeployhment>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
