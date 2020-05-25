@@ -1,7 +1,15 @@
-Configuring Travis CI for Deploying MuleSoft Application - Part I | Github | Travis CI | MuleSoft
+check .travis.yml and .travis.settings.xml files present at the project root folder
 
+
+
+Configuring Travis CI for Deploying MuleSoft Application - Part I | Github | Travis CI | MuleSoft
 https://www.youtube.com/watch?v=FPbrZ0fniSA&t=8s  - jitendra bafna video
 
 Configuring Travis CI for Deploying MuleSoft Application - Part II | Postman | Newman | MuleSoft
-
 https://www.youtube.com/watch?v=TwEF7uMrALc  - jitendra bafna video
+
+
+what is newman:
+Newman is a command line Collection Runner for Postman. 
+It allows you to run and test a Postman Collection directly from the command line. 
+It is built with extensibility in mind so that you can easily integrate it with your continuous integration servers and build systems.
